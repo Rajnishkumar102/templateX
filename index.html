@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  top:0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  color:;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+  #mySidenav a { margin-top:10%;
+    position: absolute;
+  left: -30px;
+  transition: 0.3s;
+  padding: 20px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-size: 50px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  box-sizing: content-box;  
+  text-align: right;
+
+}
+#mySidenav a:hover {
+
+  left:0px;
+}
+
+#power{top:0;
+background-color: #545;
+}
+#blog {
+  top: 100px;
+  background-color: #2196F3;
+}
+#projects {
+  top: 200px;
+  background-color: #f44336;
+}
+#contact {
+  top: 300px;
+  background-color: #555;
+}
+#about { 
+  top: 400px;
+  background-color: #4CAF50;
+}
+#desired { 
+  top: 500px;
+  background-color: orange;}
+</style>
+
+</head>
+<body>
+
+<video autoplay muted  id="myVideo">
+  <source src="background1.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <p style="font-size:+3vw;">WELCOME TO THE WORLD OF POSSIBLITIES</p>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="power">power</a>
+  <a href="#" id="about">About</a>
+  <a href="#" id="blog">Blog</a>
+  <a href="#" id="projects">Projects</a>
+  <a href="#" id="contact">Contact</a>
+  <a href="#" id="desired">desired</a>
+</div>
+
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+
+
+
+</body>
+</html>
